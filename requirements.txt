@@ -1,0 +1,10 @@
+ffmpeg-python
+fastapi
+uvicorn[standard]
+python-multipart
+aiofiles
+ultralytics
+git+https://github.com/openai/whisper.git
+tqdm
+numpy
+torch

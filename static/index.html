@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BaggingAI - Video clipper</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>BaggingAI</h1>
+      <form id="upload-form">
+        <label>Video file<input type="file" name="file" id="file" required /></label>
+        <label>Labels (comma separated, YOLO classes) <input type="text" name="labels" id="labels" placeholder="car,person" /></label>
+        <label>Keywords (transcript) <input type="text" name="keywords" id="keywords" placeholder="wow,amazing" /></label>
+        <label>Max clip length (seconds) <input type="number" name="max_len" id="max_len" value="30" /></label>
+        <label>Padding (seconds) <input type="number" name="padding" id="padding" value="4" /></label>
+        <label>Aspect ratio <input type="text" name="aspect" id="aspect" value="9:16" /></label>
+        <button type="submit">Upload & Process</button>
+      </form>
+
+      <div id="status" style="display:none">
+        <h2>Job status</h2>
+        <div id="job-id"></div>
+        <div id="progress"></div>
+        <div id="clips"></div>
+      </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
